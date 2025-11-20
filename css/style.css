@@ -7,12 +7,16 @@
 body {
     text-align: center;
     background-color: grey;
-    font-family:  sans-serif;
+    font-family: "Stack Sans Headline", sans-serif;
 }
 
 .contenedor{ 
-    display: flex;
-    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    padding: 0;
+    justify-content: center;
 }
 
 .primero h5 {
@@ -25,36 +29,23 @@ body {
     width: 80%;
 }
 
-.detalle {
-    font-size: 15px;
-    padding: 10px;
-}
 
-.barra-lateral ul {
+.primero ul {
     list-style: none;
     padding: 0;
 }
 
 .cont-izq {
-    width: 100%;
+    min-height: 100vh;
 }
+
+
 
 .titulo {
     color: white;
 }
-.estilo-calendario {
-    height: 100vh;
-    color: white;
-    position: relative;
-    background-image: url("../img/orgullo.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
-.carrusel {
-    align-items: center;
-}
+
 .titulo {
     color: white;
 }
@@ -65,45 +56,47 @@ body {
 
 .titulo h2 {
     font-size: 25px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.titulo h4 {
-    font-size: 15px;
-    margin-top: 5px;
     margin-bottom: 20px;
 }
 
+.carrusel {
+    padding: 20px;
+}
+
+
 .mes {
-    margin-top: 10px;
     font-size: 40px;
     color: rgb(192, 82, 100);
 }
 
+.estilo-calendario {
+    color: white;
+    position: relative;
+    background-image: url("../img/orgullo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 5%;
+}
+
+
+.contenedor-mes {
+    width: 80%;
+    margin: auto;
+   
+}
+
 .dias {
-    font-size: 20px;
-}
-
-.dias td {
-    padding: 10px;
-}
-
-.numero {
     font-size: 30px;
 }
 
-.contenedor-mes {
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    font-size: 15px;
-    padding: 10px;
-    color: white;
-    border-radius: 25px;
+.numero {
+    font-size: 40px;
 }
 
-.carrousel::before {
+
+.carrusel::before {
   content: "";
   position: absolute;
   top: 0;
@@ -111,6 +104,7 @@ body {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 10% 0;
 }
 
 .footer {
@@ -210,5 +204,29 @@ a{
 
     .box:nth-child(4) {
         grid-column-start: span 1;
+    }
+
+
+    .titulo h1 {
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+
+    .titulo h2 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }    
+
+    .mes {
+        font-size: 20px;
+        color: rgb(192, 82, 100);
+    }
+
+    .dias {
+        font-size: 10px;
+    }
+
+    .numero {
+        font-size: 15px;
     }
 }
